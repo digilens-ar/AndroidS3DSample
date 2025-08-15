@@ -1,0 +1,12 @@
+How to run openXR sample on ARGO
+
+1.	git clone https://github.com/KhronosGroup/OpenXR-SDK-Source.git
+2.	Open in Android Studio: Navigate to the src/tests/hello_xr
+3.	Configure the Build Variant either Vulkan or OpenGL ES as the graphics API for rendering
+4.	Build Sample 
+5.	For you to run openxr sample on ARGO you will need to include libopenxr_loader.so in your sample project 
+6.	For simplicity I have pushed that file after installing the application
+    adb push libopenxr_loader.so /data/app/~~60xpXw_kIbqUZWJz_IiGPg==/org.khronos.openxr.hello_xr.opengles-H_cLoU4J7AgHgShPefrGoQ==/lib/arm64/
+7.	Now reboot the device and run openXR sample 
+
+Note: libopenxr_loader.so can be found in loader/libopenxr_loader.so
